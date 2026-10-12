@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Espacios | Reserva Campus</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body data-page="spaces">
+    <header class="site-header"><nav class="nav" aria-label="Navegación principal"><a class="brand" href="index.html"><span class="brand-mark">RC</span>Reserva Campus</a><div class="nav-links"><a href="index.html">Inicio</a><a class="is-current" href="spaces.html">Espacios</a><a href="reservations.html">Reservar</a><a data-login-link href="login.html">Iniciar sesión</a><button class="nav-action" data-logout-button type="button" hidden>Cerrar sesión</button></div></nav></header>
+    <main class="page">
+      <div class="page-intro"><h1>Encuentra el espacio adecuado</h1><p>Explora salas e instalaciones por tipo, ubicación y capacidad. La disponibilidad se confirma al enviar la solicitud.</p></div>
+      <form class="filter-bar" data-space-filters>
+        <div class="field"><label for="search">Buscar</label><input id="search" name="search" type="search" placeholder="Sala o ubicación" maxlength="120"></div>
+        <div class="field"><label for="type">Tipo de espacio</label><select id="type" name="type"><option value="">Todos los tipos</option></select></div>
+        <div class="field"><label for="capacity">Capacidad mínima</label><input id="capacity" name="capacity" type="number" min="1" max="100000" placeholder="Cualquier capacidad"></div>
+        <button class="button button-primary" type="submit">Aplicar filtros</button>
+      </form>
+      <p class="feedback" data-feedback role="status" aria-live="polite" hidden></p>
+      <section aria-label="Espacios del catálogo" class="grid space-grid" data-space-results aria-live="polite"><p class="feedback">Cargando espacios…</p></section>
+    </main>
+    <footer class="site-footer"><div>Reserva Campus &middot; Sistema de reserva de espacios</div></footer>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
